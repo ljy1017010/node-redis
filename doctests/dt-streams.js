@@ -49,7 +49,7 @@ assert.equal(await client.xLen('race:france'), 3);
 // REMOVE_END
 
 // STEP_START xRange
-const res4 = await client.xRange('race:france', '1691765278160-0', '+', 2);
+const res4 = await client.xRange('race:france', '1691765278160-0', '+', {COUNT: 2});
 console.log(res4); // >>> [('1692629576966-0', {'rider': 'Castilla', 'speed': '30.2', 'position': '1', 'location_id': '1'}), ('1692629594113-0', {'rider': 'Norem', 'speed': '28.8', 'position': '3', 'location_id': '1'})]
 // STEP_END
 
